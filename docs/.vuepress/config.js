@@ -5,6 +5,7 @@ module.exports = {
         logo: '/assets/img/logo.png',
     },
     themeConfig: {
+        smoothScroll: true,
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Guide', link: '/css/' },
