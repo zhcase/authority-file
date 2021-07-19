@@ -13,6 +13,7 @@ module.exports = {
         ],
         sidebarDepth: 3,
         sidebar: {
+
             '/foo/': [
                 '',     /* /foo/ */
                 'one',  /* /foo/one.html */
@@ -27,9 +28,18 @@ module.exports = {
 
             // fallback
             '/': [
+
                 '',        /* / */
-                'contact', /* /contact.html */
-                'about'    /* /about.html */
+                // 'vue',
+                // 'vue', /* /contact.html */
+                // 'about',    /* /about.html */
+                {
+                    // title: 'Vue',
+                    collapsable: false, // 可选的, 默认值是 true,
+                    children: [
+                        ['vue.md', 'Vue']
+                    ]
+                },
             ],
         }
         // sidebar: [

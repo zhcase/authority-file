@@ -1,4 +1,4 @@
-# 命名规范
+# CSS&JS
 
 ## 样式命名
 
@@ -106,7 +106,7 @@
 ```
 
 ```scss
-<style lang="scss">
+<style lang="scss" scoped>
 .menu {
   position: absolute;
   left: 0;
@@ -133,3 +133,74 @@
 ```
 
 ## js 命名
+
+### 变量
+
+采用小驼峰式命名法,
+尽量在变量名字中体现所属类型
+
+```js
+// 好的命名方式
+let maxCount = 10;
+let startTime = '17:10';
+// 不好的命名方式
+let setCount = 10;
+let setTime = '17:10';
+```
+
+### 常量
+
+采用全大写的命名，且单词以\_分割
+
+```js
+const MAX_COUNT = 10;
+const URL = 'http://www.baidu.com';
+```
+
+### 函数
+
+- 命名方法：小驼峰式命名法。
+- 命名规范：前缀应当为动词。
+
+```js
+// 创建规则
+function createRule() {}
+
+// 获取名称
+function getName() {
+  return this.name;
+}
+```
+
+类与构造函数
+
+- 命名方法：大驼峰式命名法，首字母大写。
+
+- 命名规范：前缀为名称。
+
+### 注释
+
+当行注释
+多行注释
+
+```js
+// 名称函数......
+function name() {}
+
+/**
+ * 函数计算
+ * aaaaaxxxx
+ */
+function name() {}
+
+/**
+ * 计算所有相加的的数值
+ * @param {Number} a  数值1
+ * @param {Number} b  数值2
+ * @param {Number} c  数值3
+ * @return number
+ */
+function getMaxNumber(a, b, c) {
+  return a + b + c;
+}
+```
