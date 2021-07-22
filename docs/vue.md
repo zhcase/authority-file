@@ -154,9 +154,7 @@ export default{
 
 避免 v-if 和 v-for 用在一起
 
-### v-for
-
-在组件上总是必须用 key 配合 v-for，以便维护内部组件及其子树的状态。
+### v-for 与 v-if
 
 ```vue
 <template>
@@ -187,4 +185,40 @@ export default{
 <script>
 
 
+```
+
+## vue 生命周期
+
+![RUNOOB 图标](./lifecycle.png 'RUNOOB')
+
+```vue
+<template>
+  <div id="app"></div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      clearTimer: '',
+    };
+  },
+  methods: {
+    fun() {},
+  },
+  mounted() {
+    // 事件
+    document.getElementById('app').addEventListener('click', this.fun, true);
+    // 定时器
+    this.clearTimer = setInterval(() => {
+      alert(1);
+    }, 3000);
+  },
+  beforDestory() {
+    document.getElementById('app').removeEventListener('click', this.fun, true);
+    // 定时器
+    clearInterval(this.clearTimer);
+  },
+};
+</script>
 ```

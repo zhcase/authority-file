@@ -37,7 +37,7 @@
 
 ### 命名规则
 
-将采用 page 或者 component 的命名形式(全部采用小写的形式)
+将采用 page 或者 component 的命名形式(全部采用大驼峰法的形式)
 
 **项目结构：**
 
@@ -45,6 +45,7 @@
 ├── src # 项目代码
 │   ├── component #组件
 │   |   ├── Menu
+├── |   ├── FooterNav
 │   ├── views #页面
 │   |   ├── LoginForm
  ....
@@ -188,13 +189,7 @@ function getName() {
 function name() {}
 
 /**
- * 函数计算
- * aaaaaxxxx
- */
-function name() {}
-
-/**
- * 计算所有相加的的数值
+ * @description 计算所有相加的的数值
  * @param {Number} a  数值1
  * @param {Number} b  数值2
  * @param {Number} c  数值3
